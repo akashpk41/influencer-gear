@@ -1,0 +1,298 @@
+/*--------------- 
+    Common or utilities style
+                ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    background-color: rgb(38 70 83);
+    padding: 50px;
+    color: white;
+}
+
+header:hover .banner-poster img  {
+        transform: scale(1.1) rotate(10deg) ;
+
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container {
+    width: 80%;
+    margin: 40px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.btn {
+    background: rgb(224 44 109);
+    color: white;
+    padding: 6px 10px ;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    font-size: 13px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    cursor: pointer;
+    transition: .7s;
+    
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+#more-gadget-btn {
+    background: none;
+    color: rgb(228, 24, 98);
+    position: absolute;
+   right: 0;
+
+}
+/*------ 
+    Header Part Style
+
+------------------*/
+#logo h3 {
+    font-size: 13px;
+    color: white;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+}
+
+.links ul li {
+    list-style: none;
+    display: inline;
+    
+}
+.links ul li a {
+    text-decoration: none;
+    font-size: 11px;
+    color: white;
+    margin-left: 5px;
+
+}
+
+/*---------
+     header banner style
+                    --------- */
+    .header-banner {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        margin-top: 60px;
+        
+    }
+
+  .banner-box h1 {
+      font-size: 35px;
+      color: azure;
+  }
+
+  .banner-box p {
+      font-size: 14px;
+      color: azure;
+      margin: 20px 0;
+  }
+
+ .banner-poster img {
+     width: 270px;
+     margin-left: 40px;
+     transition: .7s;
+     cursor: pointer;
+ }    
+ /*---------
+        Client Section Style
+  -------------------*/
+.clients {
+      padding: 15px;
+      align-items: center;
+      text-align: center;
+    
+  }
+
+  .clients img {
+      width: 50px;
+      margin-left: 20px;
+      cursor: pointer;
+  }
+  /* ----------------------
+    Gadget Collection Section Style 
+    ---------------*/
+    .section-title {
+        text-align: center;
+        font-size:24px;
+        color: rgb(90 38 0);
+        margin-bottom: 40px;
+    }
+
+    .gadgets {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-gap: 30px;
+        position: relative;
+        
+    }
+
+    .gadget {
+        padding: 5px;
+        box-shadow: 1px 1px 5px;
+        border-radius: 5px;
+       width: 100%;
+    }
+
+ .product-detail img {
+        width:  100%;
+        height: 200px;
+    }
+  .product-name {      
+       margin: 13px 0;
+        font-size: 23px;
+  }
+.price{
+    display: block;
+    font-size: 21px;
+    margin-bottom: 10px;
+
+}
+
+.star {
+    color: rgb(255, 145, 0);
+    font-size: 18px;
+}
+
+#number {
+    color: rgb(98 98 110);
+    font-weight: bold;
+}
+
+.product-description,#number {
+    font-size: 16px;
+    color: rgb(98 98 110);
+    margin: 5px 0;
+}
+
+.company {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-column-gap: 20px;
+      display: flex;
+    margin-left: 20px; 
+}
+
+.company-address {
+   
+    border-radius: 4px;
+}
+
+iframe {
+    width: 300px;
+    height: 300px;
+}
+
+.company-details ,.company-address {
+    width: 300px;
+
+}
+
+.company-details h2 {
+    font-size: 23px;
+    font-family:  Helvetica, sans-serif;
+    margin-top: 20px;
+}
+
+.company-details p {
+    font-size: 13px;
+    color: rgb(53, 53, 58);
+    margin: 10px 0;
+}
+/* -----
+        footer part style
+     ------*/
+ footer {
+        background-color: rgb(10 8 38);
+        height: 160px;
+        width: 100%;
+ }
+
+ .copyright-info {
+     color: white;
+    text-align: center;
+    padding: 30px;
+ }
+
+ .copyright-info h3 {
+    font-size: 18px;
+ }
+
+ .copyright-info p {
+     font-size:12px ;
+     margin: 7px 0;
+     color: rgb(169 169 169);
+  }
+
+.social-link i {
+    margin: 10px ;
+    font-size: 20px;
+}
+
+  /*------ 
+        Media Queries For Mobile 
+                ----------*/
+
+    @media only screen and (max-width:576px) {
+        
+       .links {
+           display: none;
+       }
+
+       .container {
+           width: 100%;
+           
+       }
+       .company-details ,.company-address {
+        width: 250px;
+    }
+       .company {
+            flex-direction: column;
+        }
+
+    .header-banner,.company,.gadgets {    
+        grid-template-columns: repeat(1,1fr);
+    }
+    
+}
+    
+   /*------ 
+        Media Queries For Tablet 
+                ----------*/
+
+@media only screen and (min-width:577px) and (max-width:769px) {
+
+    .links {
+        display: none;
+    }
+
+    .header-banner,.company,.gadgets {
+       
+        grid-template-columns: repeat(2,1fr);
+    }
+}
